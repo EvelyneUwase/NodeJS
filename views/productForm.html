@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Add Product</h2>
+        <form id="productForm" action="/addProduct" method="post">
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="productPrice">Price (UGX)</label>
+                <input type="number" id="productPrice" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="productCategory">Produce</label>
+                <select id="productCategory" required>
+                    <option value="">Select a produce</option>
+                    <option value="beans">Beans</option>
+                    <option value="maize">Maize</option>
+                    <option value="gnuts">G-nuts</option>
+                </select>
+            </div>
+            <b>
+            <div class="form-group">
+                <label for="productImage">Upload Image</label>
+                <input type="file" id="productImage" accept="image/*">
+                <img id="imagePreview" class="image-preview" />
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <br>
+
+    <script src="product.js"></script>
+</body>
+
+</html>

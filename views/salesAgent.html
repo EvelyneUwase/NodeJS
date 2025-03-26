@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    
+    <div class="Registration-form">
+        <h2>Registration Form</h2>
+        <form id="productForm">
+            <div class="form-group">
+                <label for="agentName">Agent Name</label>
+                <input type="text" id="productName" required><br>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="agentId">Agent ID</label>
+                <textarea id="agentId" required></textarea>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" pattern=" /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/g" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter pasword" required>
+                
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input type="number" id="number" name="number" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="tin">T.I.N</label>
+                <input type="tin" id="tin" pattern="/^{10}$" name="tin" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="skills">Skills</label>
+                <input type="text" id="skills" name="skills" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="productCategory">Branch</label>
+                <select id="productCategory" required>
+                    <option value="">Select a branch</option>
+                    <option value="maganjo">Maganjo</option>
+                    <option value="matugga">Matugga</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="productImage">Upload Image</label>
+                <input type="file" id="productImage" accept="image/*">
+                <img id="imagePreview" class="image-preview" />
+            </div>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="sales.js"></script>
+</body>
+</html>
