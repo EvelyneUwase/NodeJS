@@ -1,1 +1,5 @@
 node_modules/
+.vscode/
+.env/
+
+# this is kept here to hide our environment variables or database from being displayed at github

@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='../css/styles.css')
+.Registration-form
+  h2 Registration Form
+  form#productForm(action = "/sales/addSales" method = "post")
+    .form-group
+      label(for='agentName') Agent Name
+      input#productName(type='text' name= "agentName" required='')
+      br
+    br
+    .form-group
+      label(for='agentId') Agent ID
+      textarea#agentId(required='')
+    br
+    .form-group
+      label(for='email') Email Address
+      input#email(type='email' name = "email"  required='')
+    br
+    .form-group
+      label(for='password') Password
+      input#password(type='password' name='password' placeholder='Enter pasword' required='')
+    br
+    .form-group
+      label(for='phoneNumber') Phone Number
+      input#number(type='number' name='number' required='')
+    br
+    .form-group
+      label(for='tin') T.I.N
+      input#tin(type='tin' name='tin' required='')
+    br
+    .form-group
+      label(for='skills') Skills
+      input#skills(type='text' name='skills' required='')
+    br
+    .form-group
+      label(for='productCategory') Branch
+      select#productCategory(required='')
+        option(value='') Select a branch
+        option(value='maganjo') Maganjo
+        option(value='matugga') Matugga
+    br
+    .form-group
+      label(for='productImage') Upload Image
+      input#productImage(type='file' accept='image/*')
+      img#imagePreview.image-preview
+    br
+    button(type='submit') Submit
+script(src='sales.js')

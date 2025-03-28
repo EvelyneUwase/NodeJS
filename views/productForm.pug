@@ -6,10 +6,10 @@ head
   link(rel='stylesheet' href='../css/styles.css')
 .form-container
   h2 Add Product
-  form#productForm(action='/addProduct' method='post')
+  form#Registration-form(action='/products/addProduct' method='post')
     .form-group
       label(for='productName') Product Name
-      input#productName(type='text' required='')
+      input#productName(type='text' name='productName' required='')
     br
     .form-group
       label(for='productDescription') Description
@@ -17,11 +17,11 @@ head
     br
     .form-group
       label(for='productPrice') Price (UGX)
-      input#productPrice(type='number' required='')
+      input#productPrice(type='number' name='price' required='')
     br
     .form-group
       label(for='productCategory') Produce
-      select#productCategory(required='')
+      select#productCategory(required='' name='produce')
         option(value='') Select a produce
         option(value='beans') Beans
         option(value='maize') Maize
@@ -29,9 +29,9 @@ head
     b
       .form-group
         label(for='productImage') Upload Image
-        input#productImage(type='file' accept='image/*')
+        input#productImage(type='file' name='image' accept='image/*')
         img#imagePreview.image-preview
       br
       button(type='submit') Submit
 br
-script(src='product.js')
+//- script(src='product.js')
