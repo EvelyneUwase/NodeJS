@@ -12,6 +12,8 @@ const PORT = 3030;
 //import routes
 const productRoutes = require("./routes/productRoutes");
 const salesAgentRoutes = require("./routes/salesAgentRoutes");
+const loginRoutes = require("./routes/loginRoutes");
+const signUpRoutes = require("./routes/signUpRoutes")
 
 // 3. configurations
 // for setting how to  connecting to database mongodb
@@ -41,6 +43,8 @@ app.use(express.static(path.join(__dirname, "public"))); //This helps to parse d
 // using imported routes
 app.use("/products", productRoutes);
 app.use("/sales", salesAgentRoutes);
+app.use("/login", loginRoutes);
+app.use("/signUp", signUpRoutes);
 
 // 6.Bootstrapping
 app.listen(PORT, () => console.log(`listening on  ${PORT}`));

@@ -1,0 +1,22 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Signup Page
+  link(rel='stylesheet' href='../css/signUp.css')
+.header
+  h1 Signup Page
+  form(action='/signUp/letsSignUp' method='post')
+    .signup-container
+      h2 Create an Account
+      .form-group
+        .column
+          input#new-username(type='text' name='new-user-name' placeholder='Username')
+          input#email(type='email' name='email' placeholder='Email')
+        .column
+          input#new-password(type='password' name='new-pasword' placeholder='Password')
+          input#confirm-password(type='password' name='password' placeholder='Confirm Password')
+      p#error-message.error-message Passwords do not match!
+      button(onclick='registerUser()') Sign Up
+    .footer
+      p &copy; 2025 Evelyne Uwase. All Rights Reserved.
