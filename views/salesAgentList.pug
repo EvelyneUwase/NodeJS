@@ -1,0 +1,32 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales List
+  link(rel='stylesheet' href='../css/salesList.css')
+.container
+  h1 Agent List
+  table#agentTable
+    thead
+      tr
+        th Agent Name
+        th Agent Id
+        th Email Address
+        th Password
+        th Phone Number
+        th Tin
+        th Skills
+        th Branch
+    tbody#salesTableBody
+     if agents.length 
+        each agent in agents
+          tr
+           td #{agent.agentName}
+           td #{agent.agentId}
+           td #{agent.email}
+           td #{agent.phoneNumber}
+           td #{agent.tin}
+           td #{agent.skills}
+           td #{agent.branch}
+  button(onclick='addSale()') Add 
+script(src='script.js')

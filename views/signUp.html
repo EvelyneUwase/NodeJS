@@ -12,7 +12,7 @@
 <body>
     <div class="header">
         <h1>Signup Page</h1>
-    <form action="/signUp/letsSignUp" method="post">
+    <form action="/letsSignUp" method="post">
     <div class="signup-container">
         <h2>Create an Account</h2>
         <div class="form-group">
@@ -20,12 +20,31 @@
                 <input type="text" id="new-username" name="new-user-name" placeholder="Username">
                 <input type="email" id="email" name="email" placeholder="Email">
             </div>
+        
             <div class="column">
                 <input type="password" id="new-password" name="new-pasword" placeholder="Password">
                 <input type="password" id="confirm-password" placeholder="Confirm Password">
             </div>
+            <p class="error-message" id="error-message">Passwords do not match!</p>
+
+            <div>
+                <label for="role">Select role</label>
+                <select name="role" id="role">
+                    <option value="director">Director</option>
+                    <option value="manager">Manager</option>
+                    <option value="employee">Employee</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="branch">Branch</label>
+                <select name="branch" id="branch">
+                    <option value="director">Matuga</option>
+                    <option value="manager">Maganjo</option>
+                </select>
+            </div>
         </div>
-        <p class="error-message" id="error-message">Passwords do not match!</p>
+        
         <button onclick="registerUser()">Sign Up</button>
     </div>
     <div class="footer">

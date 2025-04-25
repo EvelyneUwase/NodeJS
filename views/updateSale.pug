@@ -1,0 +1,52 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales Form
+  link(rel='stylesheet' href='../css/produce.css')
+.form-container
+  h2 Update Sales
+  br
+  form#produceForm(action='/sales/addSale?id=' + sale._id method='post')
+    .form-row
+      .form-group
+        label(for='produceName') Produce Name
+        input#produceName(name='produceName' value=sale.produceName)
+      .form-group
+        label(for='clientName') Clien&apos;s Name
+        input#clientName(name='clientName' value=sale.clientName)
+    .form-row
+      .form-group
+        label(for='quantity')
+          | Quantity 
+          span.tonnes-badge TONNES(KGS)
+        input#quantity(name='quantity' value=sale.quantity)
+      .form-group
+        label(for='cost') Cost
+        input#cost(name='cost' value=sale.cost)
+    .form-row
+      .form-group
+        label(for='date') Date
+        input#date(name='date' value=sale.date)
+      .form-group
+        label(for='inCharge') In-Charge
+        input#inCharge(name='inCharge' value=sale.inCharge)
+    .form-row
+      .form-group
+        label(for='supplierName') Supplier Name
+        input#supplierName(name='supplierName' value=sale.supplierName)
+      .form-group
+        label(for='branch') Branch
+        select#branch(name='branch' value=sale.branch)
+          option(value='select') select Branch
+          option(value='maganjo') Maganjo
+          option(value='matuga') Matuga
+    .form-row
+      .form-group
+        label(for='total') ToTal Sales
+        input#total(name='total' value=sale.total)
+    button.btn-submit(type='submit')
+      i.fas.fa-save
+      |  Save
+br
+script(src='product.js')

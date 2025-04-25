@@ -6,15 +6,15 @@ head
   link(rel='stylesheet' href='../css/styles.css')
 .Registration-form
   h2 Registration Form
-  form#productForm(action = "/sales/addSales" method = "post")
+  form#productForm(action = "/agents/addAgent" method = "post" enctype="multipart/form-data")
     .form-group
       label(for='agentName') Agent Name
-      input#productName(type='text' name= "agentName" required='')
+      input#agentName(type='text' name="agentName" "agentName" required='')
       br
     br
     .form-group
       label(for='agentId') Agent ID
-      textarea#agentId(required='')
+      textarea#agentId(required='agentId' name='agentId')
     br
     .form-group
       label(for='email') Email Address
@@ -26,11 +26,11 @@ head
     br
     .form-group
       label(for='phoneNumber') Phone Number
-      input#number(type='number' name='number' required='')
+      input#number(type='number' name='phoneNumber' required='')
     br
     .form-group
       label(for='tin') T.I.N
-      input#tin(type='tin' name='tin' required='')
+      input#tin(type='number' name='tin' required='')
     br
     .form-group
       label(for='skills') Skills
@@ -38,14 +38,14 @@ head
     br
     .form-group
       label(for='productCategory') Branch
-      select#productCategory(required='')
+      select#productCategory(required='' name="branch")
         option(value='') Select a branch
         option(value='maganjo') Maganjo
         option(value='matugga') Matugga
     br
     .form-group
-      label(for='productImage') Upload Image
-      input#productImage(type='file' accept='image/*')
+      label(for='image') Upload Image
+      input#productImage(type='file' name='image' accept='image/*')
       img#imagePreview.image-preview
     br
     button(type='submit') Submit

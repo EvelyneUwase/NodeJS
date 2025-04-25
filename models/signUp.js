@@ -1,39 +1,46 @@
 // defining our schema
-const mongoose = require('mongoose');
-const passPortLocalMongoose = require('passport-local-mongoose')
+const mongoose = require("mongoose");
+const passPortLocalMongoose = require("passport-local-mongoose");
 
-const signUpSchema = new mongoose.Schema({
- newusername:{
-    type:String,
-    trim:true,
+const SignUpSchema = new mongoose.Schema({
+  newusername: {
+    type: String,
+    trim: true,
     // required:true,
- },
+  },
 
- email:{
+  email: {
     type: String,
     trim: true,
     // required: true,
-    unique: true
- },
+    unique: true,
+  },
 
- newpasword: {
-    type:String,
-    trim:true,
-    // required: true,
- },
+  role: {
+    type: String,
+  },
 
- confirmpasword:{
-    type:String,
-    trim:true,
-    // required:true,
- }
+  branch: {
+    type: String,
+  }
 
+  //  newpasword: {
+  //     type:String,
+  //     trim:true,
+  //     // required: true,
+  //  },
+
+  //  confirmpasword:{
+  //     type:String,
+  //     trim:true,
+  //     // required:true,
+  //  }
 });
 
-signUpSchema.plugin(passPortLocalMongoose, {
-    usernameField: 'email'
+SignUpSchema.plugin(passPortLocalMongoose, {
+  usernameField: "email",
 });
 
-module.exports = mongoose.model('Signup', signUpSchema);
-// this exposes this fields to be 
+module.exports = mongoose.model("Signup", SignUpSchema);
+// this exposes this fields to be
 // signup will be the name for the collection in the database

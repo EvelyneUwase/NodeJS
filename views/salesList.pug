@@ -1,0 +1,38 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales List
+  link(rel='stylesheet' href='../css/salesList.css')
+.container
+  h1 Sales List
+  table#salesTable
+    thead
+      tr
+        th Produce Name
+        th Client Name
+        th Quantity
+        th Cost
+        th Date
+        th In-Charge
+        th Branch
+        th Total Sales
+    tbody#salesTableBody 
+     if sales.length 
+        each sale in sales
+          tr
+           td #{sale.produceName}
+           td #{sale.clientName}
+           td #{sale.quantity}
+           td #{sale.cost}
+           td #{moment(sale.date).format("DD-MM-YYYY")}
+           td #{sale.inCharge}
+           td #{sale.branch}
+           td #{sale.total}
+           td 
+            a.btn.btn-priimary(href="/sales/updateSale/"+sale._id) Update
+            form(action='/sales/deleteSale/' method='post')
+             input(type='hidden' name='id' value=sale._id)
+             button(type='submit') Delete
+  button(onclick="window.location.href='/sales/addSale'") Add Sale
+script(src='script.js')

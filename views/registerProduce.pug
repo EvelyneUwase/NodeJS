@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Product Form
+  link(rel='stylesheet' href='../css/produce.css')
+.form-container
+  h2 Register Produce
+  br
+  form#produceForm(action='/addProduce' method='post')
+    .form-row
+      .form-group
+        label(for='date') Date
+        input#date(type='date' name='date')
+      .form-group
+        label(for='supplierName') Supplier Name
+        input#supplierName(type='text' name='supplierName')
+    .form-row
+      .form-group
+        label(for='produceName') Produce Name
+        input#produceName(type='text' name='produceName' )
+      .form-group
+        label(for='quantity')
+          | Quantity 
+          span.tonnes-badge TONNES(KGS)
+        input#quantity(type='number' name='quantity' placeholder='5000')
+    .form-row
+      .form-group
+        label(for='cost') Cost
+        input#cost(type='number' name='cost' placeholder='58000')
+      .form-group
+        label(for='inCharge') in-Charge
+        input#inCharge(type='text' name='inCharge')
+    .form-row
+      .form-group
+        label(for='branch') Branch
+        select#branch(name='branch')
+          option(value='select') select Branch
+          option(value='maganjo') Maganjo
+          option(value='matuga') Matuga
+      .form-group
+        label(for='total') Total Sales
+        input#total(type='number' name='total')
+    button.btn-submit(type='submit')
+      i.fas.fa-save
+      |  Save
+br

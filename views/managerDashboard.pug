@@ -1,0 +1,74 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Manager Dashboard
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' integrity='sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==' crossorigin='anonymous' referrerpolicy='no-referrer')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js')
+  link(rel='stylesheet' href='../css/dashBoard.css')
+.sidebar
+  h2
+    i.fa-solid.fa-house
+    |  Manager Dashboard
+  br
+  br
+  ul
+    li
+      a(href='procurementM.html')
+        i.fa-solid.fa-registered
+        |  Procurement Management
+    br
+    li
+      a(href='productman.html')
+        i.fa-solid.fa-file
+        |  Product Management
+    br
+    li
+      a(href='')
+        i.fa-solid.fa-credit-card
+        br
+        | Credit Sales
+    br
+    li
+      a(href='usermanagement.html')
+        i.fa-solid.fa-users
+        |  User Management
+    br
+    li
+      a(href='')
+        i.fa-solid.fa-truck-moving
+        |   Stock Management
+    br
+    li
+      a(href='')
+        i.fa-solid.fa-gear
+        |   Settings
+    br
+    li
+      a(href='loginpage.html')
+        i.fa-solid.fa-right-from-bracket
+        |  Logout
+    br
+.main-content
+  .top-right
+    img(src='/images/profile/gatesi.jpg' style='width: 50px; height: 50px;' alt='Manager')
+    p Mrs. Gatesi
+    i.fa-solid.fa-plus
+    span.notification &#x1F514;
+  h1 Sales Overview
+  .charts-container
+    .chart
+      canvas#barChart
+    .small-chart
+      canvas#pieChart
+  .sales-overview
+    .sales-card
+      h3 Total Revenue
+      p UGX50,000
+    .sales-card
+      h3 Orders
+      p 1,200
+    .sales-card
+      h3 Customer Growth
+      p 15%
+script(src='../js/dashBoard.js')

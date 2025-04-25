@@ -1,0 +1,44 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Sales Agent Dashboard
+  link(rel='stylesheet' href='../css/salesDashBoard.css')
+  script(src='https://cdn.jsdelivr.net/npm/chart.js')
+.sidebar
+  h2 Dashboard
+  .profile
+    img(src='https://via.placeholder.com/80' alt='Profile Picture')
+    p Sales Agent
+.container(action='/go-salesDash' method='Post')
+  .topbar
+    h1 Sales Agent Dashboard
+    img.profile-pic(src='https://via.placeholder.com/40' alt='Profile')
+  .dashboard
+    .card
+      h2 Total Sales
+      p
+        | $
+        span#totalSales 0
+    .card
+      h2 Monthly Target
+      p
+        | $
+        span#monthlyTarget 5000
+    .card
+      h2 New Customers
+      p
+        span#newCustomers 0
+  .card
+    h2 Sales Performance
+    canvas#salesChart
+  .card
+    h2 Recent Transactions
+    table(border='1' width='100%')
+      thead
+        tr
+          th Date
+          th Customer
+          th Amount
+      tbody#transactionsTable
+script(src='../public/js/salesDashboard.js')

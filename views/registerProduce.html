@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <link rel="stylesheet" href="../public/css/produce.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h2>Register Produce</h2>
+        <br>
+        <form id="produceForm" action="/addProduct" method="post">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="supplierName">Supplier Name</label>
+                    <input type="text" id="supplierName" name="supplierName">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="produceName">Produce Name</label>
+                    <input type="text" id="produceName" name="produceName" placeholder="e.g Beans">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity <span class="tonnes-badge">TONNES(KGS)</span></label>
+                    <input type="number" id="quantity" name="quantity" placeholder="5000" >
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cost">Cost</label>
+                    <input type="number" id="cost" name="cost" placeholder="58000" >
+                </div>
+                <div class="form-group">
+                    <label for="inCharge">in-Charge</label>
+                    <input type="text" id="inCharge" name="inCharge" placeholder="e.g Beans">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="branch">Branch</label>
+                    <select id="branch" name="branch">
+                        <option value="select">select Branch</option>
+                        <option value="maganjo">Maganjo</option>
+                        <option value="matuga">Matuga</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="total">ToTal Sales</label>
+                    <input type="number" id="total" name="total">
+                </div>
+            </div>
+            <button type="submit" class="btn-submit">
+                <i class="fas fa-save"></i> Save
+            </button>
+    </div>
+    </form>
+    </div>
+    <br>
+</body>
+
+</html>
